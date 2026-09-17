@@ -1,0 +1,11 @@
+# Dépendances Node . js : jamais dans Git
+2 node_modules /
+3
+4 # Variables d' environnement ( mots de passe , clés d' API )
+5 . env
+6
+7 # Fichiers syst è me. DS_Store
+9 Thumbs . db
+10
+11 # R é glages locaux de l é diteur
+12 . vscode /
