@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miniforum -espace inscription</title>
+</head>
+<body>
+  <header>
+   
+  </header>
+  <main>
+    <h1>Créer un compte </h1>
+    <form action="/inscription" method="post">
+        <fieldset><legend>Identifiants</legend>
+            <p>
+                <label for="pseudoInscription">Pseudo</label>
+                <input type="text" id="pseudoInscription" name="pseudo" 
+                pattern="[A-Za-z0-9]{3,15}" 
+                title ="10 caractères maximum - lettres et chiffres uniquememt" required>
+           </p>
+           <p>
+                <label for="emailInscription">Adresse email</label>
+                <input type="email" id ="emailInscription" name="email" required>
+           </p>
+           <p>
+                <label for="motPasseInscription" >Mot de Passe</label>
+                <input type="password" id="motPasseInscription" name="motdepasse" minlength ="8">
+           </p>
+           <p>
+                <label for="dateNaissance" >Date de Naissance</label>
+                <input type="date" id="dateNaissance" name="naissance">
+           </p>
+           </fieldset>
+           <fieldset><legend>Préférence</legend>
+
+            <p>
+                <label for="pref">Recevoir la lettre d'information
+                <input type="checkbox" id="pref" name="newsletter">
+                </label>
+            </p>
+            <p>
+                <label for ="conditionsUti">J'accepte les conditions d'utilisation</label>
+                <input type="checkbox" id="conditionsUti" name="cgu" required>
+            </p>
+
+        </fieldset>
+
+    </form>
+        <button type="submit">Créer mon compte</button>
+        <p>
+        <a  href="connexion.html">Connexion</a>
+        </p>
+        <p>
+            <a href="index.html">Retour</a>
+        </p>
+  </main>
+
+<footer>
+    <!--Pied de page -->
+</footer>
+</body>
+</html>
+
