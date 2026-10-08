@@ -16,25 +16,92 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* === 2. En-tete et navigation ================================*/
+
+
+
+
+
+.entete {
+
+        display: flex; 
+        justify-content: space-between;
+        align-items: center;
+        list-style :none;
+        padding: 12px 24px;
+        margin :20;
+        gap : 15px;
+        background: #A76800;
+        
+
+
+
+
+}
+
+header nav ul  {
+       
+        display: flex; 
+        justify-content: space-between;
+        align-items: center;
+        list-style :none;
+        padding: 0;
+        margin :0;
+        gap : 20px;
+        background: #A76800;
+        
+        
+        
+        
+
+}
+
+header nav ul a{
+
+color: #FFFFFF;
+text-decoration: none;
+
+}
+
+.pied{
+
+
+        background:#E2DED8 ;
+        text-align: center;
+        padding: 5px;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* === 3. Contenu principal ====================================*/
 /* === 4. Cartees de sujets ====================================*/
 /* === 5. Formulaires ==========================================*/

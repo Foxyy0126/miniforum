@@ -7,18 +7,19 @@
     <title>Miniforum -Accueil></title>
 </head>
 <body>
-    <header>
+    <header class="entete">
         <form action="/inscription" method="get"></form>
-        <input type="search" 
-        <img src ="./images/image_renard.png" alt="Image du logo d'un renard">
+        
+       <img src ="./images/image_renard.png" alt="Image du logo d'un renard">
         <!-- Titre du site + navigation-->
          <h1>MiniForum</h1>
+        
          <nav>
              <ul>
                  <li><a href="#index.html">Accueil</a></li>
                  <li><a href="sujet.html">Sujets</a></li>
                  <li><a href="inscription.html">Sînscrire</a></li>
-                 <li><a href="connexion.html">Se connecter</a></li>
+                 <li><a href="connexion.html">Connexion</a></li>
                 
                  
              </ul>
@@ -27,17 +28,17 @@
     
     <main>
         <!--Liste des sujets-->
-        <section id ="sujets">
+        <section id ="sujets" class="liste-sujets">
             <h2>Sujets récents</h2>
-                <article>
+                <article class="carte-sujet">
                     <h3>Sujets</h3>
                     <p><strong>Auteurs</strong> Catégorie</p>
                 </article>
-                <article>
+                <article class="carte-sujet">
                     <h3>Sujet 2</h3>
                    <p><strong>Auteurs</strong> Catégorie</p>
                 </article>
-                <article>
+                <article class="carte-sujet">
                     <h3>Sujets 3</h3>
                     <p><strong>Auteurs</strong> Catégorie</p>
                 </article>
@@ -84,11 +85,11 @@
                      </p>
             </fieldset>
 
-            <button type="submit">Publier le sujet</button>
+            <button type="submit" class="bouton">Publier le sujet</button>
         </form>
        </section>     
     </main>
-    <footer>
+    <footer class="pied">
         <!-- Pied de page-->
          <p>MiniForum - Projet du cours de développement web </p>
         <p> Classe Passerelle-cfpt.i</p>
