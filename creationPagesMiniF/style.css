@@ -1,8 +1,42 @@
-button {
-        background-color: #1d4e89;
-        color : white ;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
+/* === 1. Reglages generaux ====================================*/
+
+*{ box-sizing : border-box;}
+
+body {
+        margin:0auto;
+         background:#BDCED6;
+         font-family: Helvetica, Arial, Helvetica, sans-serif;
+         font-size: 16px;
+         line-height: 1.6;
+         color:#2D1515;
+         
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* === 2. En-tete et navigation ================================*/
+/* === 3. Contenu principal ====================================*/
+/* === 4. Cartees de sujets ====================================*/
+/* === 5. Formulaires ==========================================*/
+/* === 6. Pied de page =========================================*/
+
