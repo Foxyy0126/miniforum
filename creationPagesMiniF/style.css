@@ -1,20 +1,48 @@
+
+/* Ma palette de couleurs :*******************************************
+
+
+Texte : 79002D
+Accent : FF860F
+Fond de page : 838d4C
+Fond de carte : FFE9BA
+Bordure : EA6B40
+
+**********************************************************************/
+
+
+
+
+
+
+
+
+
+
+
 /* === 1. Reglages generaux ====================================*/
 
 *{ box-sizing : border-box;}
 
 body {
-        margin:0auto;
-         background:#BDCED6;
-         font-family: Helvetica, Arial, Helvetica, sans-serif;
+         margin:0 auto;
+         background :#838D4C;
+         font-family:  212 Moon Child , Helvetica, Arial, Helvetica, sans-serif;
          font-size: 16px;
          line-height: 1.6;
-         color:#2D1515;
+         color:#79002D;
          
 
 }
 
 
+main {
 
+max-width: 900px ;
+margin: 0 auto;
+padding :20px;
+
+} 
 
 /* === 2. En-tete et navigation ================================*/
 
@@ -31,11 +59,7 @@ body {
         padding: 12px 24px;
         margin :20;
         gap : 15px;
-        background: #A76800;
-        
-
-
-
+        background: #FFE9BA;
 
 }
 
@@ -48,29 +72,25 @@ header nav ul  {
         padding: 0;
         margin :0;
         gap : 20px;
-        background: #A76800;
-        
-        
-        
-        
+        background: #FFE9BA;
 
 }
 
-header nav ul a{
 
-color: #FFFFFF;
+a{
+
+color: #e3740cec;
 text-decoration: none;
+list-style :none;
 
 }
 
 .pied{
 
-
-        background:#E2DED8 ;
+        background:#FFE9BA ;
         text-align: center;
         padding: 5px;
-
-
+        
 }
 
 /* === 3. Contenu principal ====================================*/
@@ -82,6 +102,83 @@ text-decoration: none;
 
 
 /* === 4. Cartees de sujets ====================================*/
+
+
+
+.liste-sujets{
+
+        display: flex;
+        
+        gap: 20px;    
+        align-items: center;
+}
+
+
+.carte-sujets {
+
+        background-color: #FFFFFF;
+        border: 2px solid;
+        border-radius: 10px;
+        padding: 10 px;
+        
+}
+
+.carte-sujets h3 { 
+        font-size: 24px;
+        color: #e3740cec;
+        text-align: center;
+        
+}
+
+.carte-sujets p {
+
+        font-size: 11px ;
+        color: darkgrey;
+        margin : 30px;
+}
+
+.carte-message {           /*modifie les articles dans la page sujets*/
+
+        display: flex;
+        flex-direction: column;
+        background-color: #FFFFFF;
+        border: 2px solid;
+        border-radius: 10px;
+        margin :20px;
+       
+
+        
+}
+
+.carte-message h4 {         /*modifie les articles dans la page sujets*/
+        font-size: 24px;
+        color: #e3740cec;
+        text-align: center;
+        margin :0;
+       
+
+}
+  
+
+
+
+
 /* === 5. Formulaires ==========================================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* === 6. Pied de page =========================================*/
 

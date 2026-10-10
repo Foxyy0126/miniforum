@@ -7,7 +7,7 @@
     <title>Bienvenue sur le MiniForum</title>
 </head>
 <body>
-    <header>
+    <header class="entete">
         <img src ="./images/image_renard.png" alt="Image du logo d'un renard">
         <!-- Titre du site + navigation-->
          <h1>MiniForum</h1>
@@ -23,21 +23,24 @@
      </nav>
       
             <h2>Sujet 4</h2>
-                <section>
+                <section >
                     <h3>Réponses </h3>
-                         <article> <h4>Article 1</h4>
-                            <p> <strong>Auteurs</strong>   <time datetime="2026-09-24"> 24 septembre 2026 </time> </p>
-                            <p> Contenu de l'article 1</p>
+                         <article class="carte-message"> <h4 >Article 1</h4>
+                            <p > Contenu de l'article 1</p>
+                            <p > <strong>Auteurs</strong>   <time datetime="2026-09-24"> 24 septembre 2026 </time> </p>
+                            
                         </article>
-                    <article><h4>Article 2</h4>
-                        <p><strong>Auteurs</strong>  <time datetime="2026-09-24"> 24 septembre 2026 </time></p>
-                         <p> Contenu de l'article 2</p>
+                    <article class="carte-message"><h4>Article 2</h4>
+                        <p > Contenu de l'article 2</p>
+                        <p ><strong>Auteurs</strong>  <time datetime="2026-09-24"> 24 septembre 2026 </time></p>
+                         
                     </article>
-                    <article><h4>Article 3</h4>
-                        <p><strong>Auteurs</strong> 
+                    <article class="carte-message" ><h4>Article 3</h4>
+                        <p > Contenu de l'article 3</p>
+                        <p  ><strong>Auteurs</strong> 
                             <time datetime="2026-09-24"> 24 septembre 2026 </time>
                         </p>
-                         <p> Contenu de l'article 3</p>
+                         
                     </article>
                  </section>
 
@@ -51,7 +54,7 @@
                                     <input type="text"  id ="prenomRep" name="pseudo" required>
                                 </p>
                                 <p>
-                                    <label for="messageRep" class="carte-message">Message : </label>
+                                    <label for="messageRep">Message : </label>
                                     <textarea id ="messageRep" name ="message" rows="6" maxlenght="500"></textarea>
                                 </p>
                             </fieldset>
@@ -71,7 +74,8 @@
     </main>
     <footer class="pied">
         <!-- Pied de page-->
-        
-        </footer>
+         <p>MiniForum - Projet du cours de développement web </p>
+         <p> Classe Passerelle-cfpt.i</p>
+    </footer>
 </body>
 </html>
