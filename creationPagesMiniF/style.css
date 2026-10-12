@@ -26,7 +26,7 @@ Bordure : EA6B40
 
 body {
          margin:0 auto;
-         background :#838D4C;
+         background :#A6B49B;
          font-family:  212 Moon Child , Helvetica, Arial, Helvetica, sans-serif;
          font-size: 16px;
          line-height: 1.6;
@@ -97,7 +97,9 @@ list-style :none;
 
 
 
-
+fieldset{
+        margin-bottom: 20px ;
+}
 
 
 
@@ -166,26 +168,39 @@ list-style :none;
 /* === 5. Formulaires ==========================================*/
 
 
+
 input, textarea, select, button{
 
-        font-family: inherit;
-        width: 100%;
-        padding: 8px;
-        border-radius: 7px;
-        border: #79002D 1px solid;
+                padding: 8px;
+                font-family: inherit;
+                border-radius: 7px;
+                border: #79002D 1px solid;
+                
 }
 
-label{
 
-        display: block;
-        gap:5px;
+input:not([type="radio"]):not([type="checkbox"]), textarea, select, button {
+    width: 100%; /*pourque les boutons radios et case a cocher reste sur la meme ligne que leur label*/
+}
+        
+        
+.bouton {
+
+background-color :#79002D;
+color: #FFFFFF;
+padding: 15px;
+font-size: 16px;
+border-radius: 7px;
+border: #FFFFFF 2px solid;
+cursor: pointer;
+
 }
 
-form{
-
-   gap: 15px;
+textarea{
+        resize: vertical;
 }
- 
+
+
 
 
 
