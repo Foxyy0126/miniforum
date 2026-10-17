@@ -2,12 +2,14 @@
 /* My colors  :*******************************************
 
 
-Text : 79002D
+Texte et titre sujet dans sujets.html et aussi contenu article dans sujets.html: 79002D ok
 Accent : FF860F
 Background: 838d4C,A6B49B 
-Backgroud 2 : FFE9BA
+couleur entete et pied de page: FFE9BA ok 
 Border : EA6B40
 menu :e3740cec
+carte sujets :FFFFFF
+couleurs infos dans cartes sujets sur auteyrs etc dans index.html:#2F4300 ok
 **********************************************************************/
 
 
@@ -159,21 +161,14 @@ fieldset{
         border-radius: 10px;
         gap :5px;
         margin-bottom: 15px;
-
-       
-
-        
 }
-
 
 
 .carte-message h4 {         /*modifie les articles dans la page sujets*/
         font-size: 30px;
         color: /*#C84F00*/ /*#AA3939*/ /*#AA3939*//*#FF5300*/ /*#41233D*/#79002D;
         text-align: center;
-        margin :0;
         font-weight: bold;
-       
 
 }
   
