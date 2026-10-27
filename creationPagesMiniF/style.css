@@ -1,3 +1,8 @@
+/*******************
+flex-basis vait environ 227 px
+*******************/
+
+
 
 :root {
         --couleur_titres_sujets_menu_boutons : #79002D;
@@ -93,12 +98,16 @@ fieldset{
 
         display: flex;
         gap: var(--espacement_gap);    
-        flex-direction: column;
+        flex-wrap: wrap;
 }
 
+.liste-sujets h2{
+        flex: 1 1 100%;
+}
 
 .carte-sujets {
 
+        flex: 1 1 18rem;
         background-color: var(--couleur_carte_sujets_messages);
         border: 2px solid;
         border-radius: var(--rayon);
