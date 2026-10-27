@@ -67,22 +67,29 @@ padding :var(--espacement_padding_bouton_cartes_main);
         justify-content: space-between;
         align-items: center;
         list-style :none;
-
         padding:var(--espacement_padding_entete_bornes);
         margin :var(--espacement_margin);
         gap : var(--espacement_gap);
         background:var(--couleur_entete_pied_pointilles );
 
 }
+ .titre_alignement{
 
+display: flex;
+flex-wrap: wrap;
+
+ }
 
 .entete div  {
 
        display:flex;
        align-items: center;
        gap: 5rem;
+       
 
 }
+
+
 header nav ul  {
        
         display: flex; 
@@ -145,25 +152,6 @@ fieldset{
         gap :var(--espacement_gap);
         flex-direction: column;
 }
-
-
-
- 
-        
-        
-        
-       
-        
-        
-
-
-
-
-
-
-
-
-
 
 /* === 4. Cartes de sujets ====================================*/
 
@@ -304,6 +292,8 @@ input[type="radio"]:focus, input[type="checkbox"]:focus {
 
 .pied{
 
+        display: flex;
+        flex-wrap: wrap;
         background:var(--couleur_entete_pied_pointilles);
         text-align: center;
         padding: var(--espacement_gap);
