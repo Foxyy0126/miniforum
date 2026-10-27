@@ -1,56 +1,50 @@
 
-/* My colors  :*******************************************
+:root {
+        --couleur_titres_sujets_menu_boutons : #79002D;
+        --couleur_arriere_plan: #90a084;
+        --couleur_entete_pied_pointilles : #FFE9BA;
+        --couleur_carte_sujets_messages:#FFFFFF;
+        --couleur_infos_auteurs_carte_sujets_messages:#2F4300;
+        --couleur_hover: #033857;
+        --couleur_encadre_selection: pink;
 
+       
+        --espacement_padding_entete_bornes: 0.8rem 1.5rem;
+        --espacement_padding_bouton_cartes_main:0.8rem;
+        --espacement_max_width: 60rem;
+        --espacement_margin:1.5rem;
+        --espacement_gap:1rem ;
+        
 
-Texte et titre sujet dans sujets.html et aussi contenu article dans sujets.html: 79002D ok
-Accent : FF860F
-Background: 838d4C,A6B49B 
-couleur entete et pied de page: FFE9BA ok 
-Border : EA6B40
-menu :e3740cec
-carte sujets :FFFFFF
-couleurs infos dans cartes sujets sur auteyrs etc dans index.html:#2F4300 ok
-**********************************************************************/
-
-
-
-
-
-
-
-
-
-
+        --rayon:0.6rem;
+        
+}
 
 /* === 1. Reglages generaux ====================================*/
 
 *{ box-sizing : border-box;}
 
+img {max-width: 100%; height: auto;}
 body {
          margin:0 auto;
-         background :#A6B49B;
+         background :var(--couleur_arriere_plan);
          font-family: Georgia, 'Times New Roman', Times, serif, "212 Moon Child" , Helvetica, Arial, Helvetica, sans-serif;
-         font-size: 16px;
+         font-size: 1rem;
          line-height: 1.6;
-         color:#79002D;
-         
+         color:var( --couleur_titres_sujets_menu_boutons);      
 
 }
 
 
 main {
 
-max-width: 900px ;
+max-width: var(--espacement_max_width) ;
 margin: 0 auto;
-padding :20px;
+padding :var(--espacement_padding_bouton_cartes_main);
 
 } 
 
 /* === 2. En-tete et navigation ================================*/
-
-
-
-
 
 .entete {
 
@@ -58,10 +52,10 @@ padding :20px;
         justify-content: space-between;
         align-items: center;
         list-style :none;
-        padding: 12px 24px;
-        margin :20px;
-        gap : 15px;
-        background: #FFE9BA;
+        padding:var(--espacement_padding_entete_bornes);
+        margin :var(--espacement_margin);
+        gap : var(--espacement_gap);
+        background:var(--couleur_entete_pied_pointilles );
 
 }
 
@@ -70,8 +64,7 @@ header nav ul  {
         display: flex; 
         justify-content: space-between;
         align-items: center;
-        /*margin:20px;*/
-        gap:20px;
+        gap:var(--espacement_gap);
         list-style-type: none;
 
 }
@@ -80,28 +73,10 @@ header nav ul  {
 a{
 
 font-weight: bold;
-color: /*#AA3939*/ /*#FF5300*/ /*#41233D*/ #79002D;
+color:  var(--couleur_titres_sujets_menu_boutons);
 text-decoration: none;
 list-style :none;
 
-}
-
-.pied{
-
-        background:#FFE9BA ;
-        text-align: center;
-        padding: 5px;
-        margin :20px;
-        /*display: block; 
-        justify-content: center;
-        align-items: center;
-        list-style :none;
-        padding: 12px 24px;
-        margin :20px;
-        gap : 15px;
-        background: #FFE9BA;*/
-        
-        
 }
 
 /* === 3. Contenu principal ====================================*/
@@ -109,35 +84,31 @@ list-style :none;
 
 
 fieldset{
-        margin-bottom: 20px ;
+        margin-bottom: var(--espacement_margin) ;
 }
 
-
-
 /* === 4. Cartes de sujets ====================================*/
-
-
 
 .liste-sujets{
 
         display: flex;
-        gap: 16px;    
+        gap: var(--espacement_gap);    
         flex-direction: column;
 }
 
 
 .carte-sujets {
 
-        background-color: #FFFFFF;
+        background-color: var(--couleur_carte_sujets_messages);
         border: 2px solid;
-        border-radius: 10px;
-        padding: 10px;
+        border-radius: var(--rayon);
+        padding:var(--espacement_padding_bouton_cartes_main);
         
 }
 
 .carte-sujets h3 { 
-        font-size: 24px;
-        color: /*#AA3939*/ /*#FF5300*/ /*#41233D*/ #79002D;
+        font-size: 1.5rem;
+        color: var(--couleur_titres_sujets_menu_boutons);
         text-align: center;
         font-weight: bold;
         
@@ -145,9 +116,9 @@ fieldset{
 
 .carte-sujets p {
 
-        font-size: 11px ;
-        color:#2F4300;
-        margin : 30px;
+        font-size: 0.75rem ;
+        color:var(--couleur_infos_auteurs_carte_sujets_messages);
+        margin : var(--espacement_margin);
         font-weight: bold;
         
 }
@@ -156,17 +127,17 @@ fieldset{
 
         display: flex;
         flex-direction: column;
-        background-color: #FFFFFF;
+        background-color: var(--couleur_carte_sujets_messages);
         border: 2px solid;
-        border-radius: 10px;
-        gap :5px;
-        margin-bottom: 15px;
+        border-radius:var(--rayon);
+        gap :var(--espacement_gap);
+        margin-bottom: var(--espacement_margin);
 }
 
 
 .carte-message h4 {         /*modifie les articles dans la page sujets*/
-        font-size: 30px;
-        color: /*#C84F00*/ /*#AA3939*/ /*#AA3939*//*#FF5300*/ /*#41233D*/#79002D;
+        font-size: 1.9rem;
+        color:var(--couleur_titres_sujets_menu_boutons);
         text-align: center;
         font-weight: bold;
 
@@ -174,32 +145,27 @@ fieldset{
   
 .carte-message p {
 
-        font-size: 11px ;
-        color: #2F4300;
-        margin : 30px;
+        font-size: 0.75rem ;
+        color: var(--couleur_infos_auteurs_carte_sujets_messages);
+        margin : var(--espacement_margin);
         font-weight: bold;
 }
 
 article p:first-of-type { 
-        font-size:17px ;
-        color: #79002D;
-        margin : 30px;
+        font-size:1rem ;
+        color:var(--couleur_titres_sujets_menu_boutons);
+        margin : var(--espacement_margin);
         text-align: center;
 }
 
-
-
-
 /* === 5. Formulaires ==========================================*/
-
-
 
 input, textarea, select, button{
 
-                padding: 8px;
+                padding: var(--espacement_gap);
                 font-family: inherit;
-                border-radius: 7px;
-                border: #79002D 1px solid;
+                border-radius: var(--rayon);
+                border: var(--couleur_titres_sujets_menu_boutons) 2px solid;
                 
 }
 
@@ -212,12 +178,12 @@ input:not([type="radio"]):not([type="checkbox"]), textarea, select, button {
                                                                         
 .bouton {
 
-background-color :#79002D;
-color: #FFFFFF;
-padding: 15px;
-font-size: 16px;
-border-radius: 7px;
-border: #FFFFFF 2px solid;
+background-color : var(--couleur_titres_sujets_menu_boutons);
+color: var(--couleur_carte_sujets_messages);
+padding: var(--espacement_padding_bouton_cartes_main);
+font-size: 1rem;
+border-radius: var(--rayon);
+border:  var(--couleur_carte_sujets_messages)2px solid;
 cursor: pointer;
 
 }
@@ -226,41 +192,41 @@ textarea{
         resize: vertical;
 }
 
-nav a:hover, .bouton:hover, p a:hover ,  label:hover{
+nav a:hover,.bouton:hover,  p a:hover ,  label:hover{
         text-decoration-line:underline;
-        text-decoration-color: #79002D;
-        text-decoration-thickness: 1px;
+        text-decoration-color: var(--couleur_hover);
+        text-decoration-thickness: 0.07rem;
         text-decoration-style: wavy;
 }
-nav a:focus-visible, .bouton:focus-visible, p a:focus-visible, input[type="radio"]:focus-visible , input[type="text"]:focus-visible, input[type="email"]:focus-visible , textarea:focus-visible,select:focus-visible,input[type="password"]:focus-visible,input[type="date"]:focus-visible,input[type="checkbox"]:focus-visible{
+nav a:focus-visible,  .bouton:focus-visible, p a:focus-visible, input[type="radio"]:focus-visible , input[type="text"]:focus-visible, input[type="email"]:focus-visible , textarea:focus-visible,select:focus-visible,input[type="password"]:focus-visible,input[type="date"]:focus-visible,input[type="checkbox"]:focus-visible{
 
-outline: 4px dotted #FFE9BA;
-outline-offset: 2px;
+outline: 0.25rem dotted var(--couleur_entete_pied_pointilles);
+outline-offset: 0.125rem;
 
 }
 
 
  .bouton:focus,  input[type="radio"]:focus , input[type="text"]:focus, input[type="email"]:focus , textarea:focus,select:focus,input[type="password"]:focus,input[type="date"]:focus,input[type="checkbox"]:focus{
 
-border:2px solid pink;
+border:2px solid var(--couleur_encadre_selection);
 
 
 }
 
 input[type="radio"]:focus, input[type="checkbox"]:focus {
-    accent-color:  pink;
+    accent-color:  var(--couleur_encadre_selection);
 }
-
-
-
-
-
-
-
-
-
-
 
 
 /* === 6. Pied de page =========================================*/
 
+.pied{
+
+        background:var(--couleur_entete_pied_pointilles);
+        text-align: center;
+        padding: var(--espacement_gap);
+        margin :var(--espacement_margin);
+       
+        
+        
+}
