@@ -19,9 +19,15 @@
      
       
             <h2>Sujet 4</h2>
-                <section >
-                    <h3>Réponses </h3>
-                         <article class="carte-message"> <h4 >Article 1</h4>
+            <h3>Réponses </h3>
+            <div class="zone-sujet">
+                
+                <div class="articles">
+                    
+                <section class="fil-messages">
+                    
+                    
+                         <article class="carte-message "> <h4 >Article 1</h4>
                             <p > Contenu de l'article 1</p>
                             <p > <strong>Auteurs</strong>   <time datetime="2026-09-24"> 24 septembre 2026 </time> </p>
                             
@@ -39,8 +45,14 @@
                          
                     </article>
                  </section>
+                 </div>
+                 <aside class="infos-sujet">
+                    <h3>A propos de ce sujet</h3>
+                    <p>auteur : Sara , date : fin 2026 , Projet web</p> 
+                 </aside>
+                 </div>
 
-                 <section>
+                 <section >
                     <form action="/topics" method="post">
                         <h3>Répondre à ce sujet</h3>
                             <fieldset>
@@ -54,16 +66,13 @@
                                     <textarea id ="messageRep" name ="message" rows="6" maxlength="500"></textarea>
                                 </p>
                             </fieldset>
-                                <button type="submit" class="bouton" >Envoyer la réponse</button>
-                                    <p><a href="index.html">Retour</a></p>
+                               
                                     
                     </form>
-
-                          
-
                  </section>
-
-      
+                 
+      <button type="submit" class="bouton" >Envoyer la réponse</button>
+      <p><a href="index.html">Retour</a></p>
       
 
 

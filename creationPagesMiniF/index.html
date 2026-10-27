@@ -9,15 +9,17 @@
 <body>
     <header class="entete">
       
-        <form action="/inscription" method="get"></form>
+        <div>
         
-       <img src ="./IMAGE/image_renard.png" alt="Image du logo d'un renard">
-        <!-- Titre du site + navigation-->
-         <h1>MiniForum</h1>
-        
+       <img src ="./image_renard.png "  class="logo_titre" alt="Image du logo d'un renard">
+       <!-- Titre du site + navigation-->
+       <h1>Bienvenu sur le MiniForum !</h1>
+
+        </div>
+
          <nav>
              <ul>
-                 <li><a href="#index.html">Accueil</a></li>
+                 <li><a href="#index.html">Accueil</a></li>   
                  <li><a href="sujet.html">Sujets</a></li>
                  <li><a href="inscription.html">S'inscrire</a></li>
                  <li><a href="connexion.html">Connexion</a></li>
@@ -25,8 +27,8 @@
                  
              </ul>
         </nav>
-    </header>        
-    
+    </header>  
+    <form action="/inscription" method="get"></form>      
     <main>
         <!--Liste des sujets-->
         <section id ="sujets" class="liste-sujets">

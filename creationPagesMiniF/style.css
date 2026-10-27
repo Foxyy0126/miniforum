@@ -18,7 +18,8 @@ flex-basis vait environ 227 px
         --espacement_padding_bouton_cartes_main:0.8rem;
         --espacement_max_width: 60rem;
         --espacement_margin:1.5rem;
-        --espacement_gap:1rem ;
+        --espacement_gap:2rem ;
+        --espacement_gap_grand: 2rem;
         
 
         --rayon:0.6rem;
@@ -30,6 +31,14 @@ flex-basis vait environ 227 px
 *{ box-sizing : border-box;}
 
 img {max-width: 100%; height: auto;}
+
+.logo_titre{
+
+max-width: 8rem;
+
+}
+
+
 body {
          margin:0 auto;
          background :var(--couleur_arriere_plan);
@@ -37,7 +46,6 @@ body {
          font-size: 1rem;
          line-height: 1.6;
          color:var( --couleur_titres_sujets_menu_boutons);      
-
 }
 
 
@@ -54,9 +62,12 @@ padding :var(--espacement_padding_bouton_cartes_main);
 .entete {
 
         display: flex; 
+         /* flex-direction: column; pas joli */
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
         list-style :none;
+
         padding:var(--espacement_padding_entete_bornes);
         margin :var(--espacement_margin);
         gap : var(--espacement_gap);
@@ -64,17 +75,25 @@ padding :var(--espacement_padding_bouton_cartes_main);
 
 }
 
+
+.entete div  {
+
+       display:flex;
+       align-items: center;
+       gap: 5rem;
+
+}
 header nav ul  {
        
         display: flex; 
+        /* flex-direction: row; */
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
         gap:var(--espacement_gap);
         list-style-type: none;
-
+        
 }
-
-
 a{
 
 font-weight: bold;
@@ -91,6 +110,60 @@ list-style :none;
 fieldset{
         margin-bottom: var(--espacement_margin) ;
 }
+
+
+.zone-sujet{
+
+        display:flex;
+        flex-wrap: wrap;
+        gap:var(--espacement_gap_grand);
+}
+
+.articles {
+        display:flex;
+        flex-direction: column;
+         flex: 1 1 24rem ;
+}
+
+.fil-messages{
+
+        display: flex;
+        flex-direction: column;
+        gap : var(--espacement_gap);
+        flex: 1 1 24rem 
+
+}
+
+.infos-sujet{
+
+        display: flex;
+        flex :0 0 16rem;
+        background-color: var(--couleur_carte_sujets_messages);
+        border: 2px solid;
+        border-radius: var(--rayon);
+        padding:var(--espacement_padding_bouton_cartes_main);
+        gap :var(--espacement_gap);
+        flex-direction: column;
+}
+
+
+
+ 
+        
+        
+        
+       
+        
+        
+
+
+
+
+
+
+
+
+
 
 /* === 4. Cartes de sujets ====================================*/
 
@@ -139,8 +212,8 @@ fieldset{
         background-color: var(--couleur_carte_sujets_messages);
         border: 2px solid;
         border-radius:var(--rayon);
-        gap :var(--espacement_gap);
-        margin-bottom: var(--espacement_margin);
+        
+        /* margin-bottom: var(--espacement_margin); */
 }
 
 
