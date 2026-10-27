@@ -292,7 +292,7 @@ input[type="radio"]:focus, input[type="checkbox"]:focus {
 
 .pied{
 
-        display: flex;
+        /* display: flex; */
         flex-wrap: wrap;
         background:var(--couleur_entete_pied_pointilles);
         text-align: center;
