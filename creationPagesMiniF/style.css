@@ -18,7 +18,7 @@ flex-basis vait environ 227 px
         --espacement_padding_bouton_cartes_main:0.8rem;
         --espacement_max_width: 60rem;
         --espacement_margin:1.5rem;
-        --espacement_gap:2rem ;
+        --espacement_gap:1rem ;
         --espacement_gap_grand: 2rem;
         
 
@@ -70,9 +70,20 @@ padding :var(--espacement_padding_bouton_cartes_main);
         padding:var(--espacement_padding_entete_bornes);
         margin :var(--espacement_margin);
         gap : var(--espacement_gap);
-        background:var(--couleur_entete_pied_pointilles );
-
+        background:var(--couleur_entete_pied_pointilles ); 
+        
+        
 }
+@media(min-width:48rem){
+        .entete{
+                justify-content: space-between;
+                align-items: center;
+                padding:var(--espacement_padding_entete_bornes);
+               
+        } 
+}
+
+
  .titre_alignement{
 
 display: flex;
@@ -89,6 +100,15 @@ flex-wrap: wrap;
 
 }
 
+.titre_alignement, .entete div {
+    min-width: 0; /* Permet aux conteneurs flex intermédiaires de rétrécir */
+}
+
+h1, h2, h3, h4, p, a {
+    overflow-wrap: break-word;
+    word-break: break-word; /* Sécurité supplémentaire pour les anciens navigateurs */
+    min-width: 0;
+}
 
 header nav ul  {
        
@@ -99,6 +119,7 @@ header nav ul  {
         align-items: center;
         gap:var(--espacement_gap);
         list-style-type: none;
+        
         
 }
 a{
@@ -130,6 +151,7 @@ fieldset{
         display:flex;
         flex-direction: column;
          flex: 1 1 24rem ;
+         min-width :0;
 }
 
 .fil-messages{
@@ -137,7 +159,8 @@ fieldset{
         display: flex;
         flex-direction: column;
         gap : var(--espacement_gap);
-        flex: 1 1 24rem 
+        flex: 1 1 24rem ;
+        min-width :0;
 
 }
 
