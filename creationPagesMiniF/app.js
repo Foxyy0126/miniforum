@@ -26,4 +26,23 @@ const titres = [
 ];
 
 
+        
+// const titresTries = [...titres].sort((a,b) => a.localeCompare(b));
 
+
+// const chercheDansTitres =[...titres].filter((t) => t.includes("?"));
+
+function titresTries(titres){
+
+        return [...titres].sort((a,b) => a.localeCompare(b));
+}
+
+function chercheDansTitres(titres, texte){
+        texte= texte.toLowerCase();
+        return [...titres].filter((t) => t.includes(texte))
+}
+
+function titreExiste(titres,saisie) {
+       saisie= saisie.trim().toLowerCase();
+       return [...titres].filter((t)=> t.includes(saisie));
+}
