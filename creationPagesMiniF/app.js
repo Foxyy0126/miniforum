@@ -44,13 +44,53 @@ function chercheDansTitres(titres, texte){
 
 function titreExiste(titres,saisie) {
        saisie= saisie.trim().toLowerCase();
-       return [...titres].filter((t)=> t.includes(saisie));
+//        return [...titres].filter((t)=> t.toLowerCase().includes(saisie));
+        let titles = [...titres].filter((t)=> t.toLowerCase() === saisie);
+        if (titles.length > 0) {
+                return true;
+        } 
+        return false;
 }
 
-console . log ( " --- etape 4 ---" ) ;
-console . table ( titresTries ( titres ) ) ; // rangées
-console . log ( titres [0]) ; // l'original n'a pas bougé
-console . log ( chercheDansTitres ( titres , " récents " ) ) ; // les titres sur récents
-console . log ( chercheDansTitres ( titres , " licorne " ) ) ; // [] : vide , pas une erreur
-console . log ( titreExiste ( titres , " GIT REFUSE MON PUSH " ) ) ; // true si à toi
-console . log ( titreExiste ( titres , " Un titre inventé " ) ) ;
+// console . log ( " --- etape 4 ---" ) ;
+// console . table ( titresTries ( titres ) ) ; // rangées
+// console . log ( titres [0]) ; // l'original n'a pas bougé
+// console . log ( chercheDansTitres ( titres , " récents " ) ) ; // les titres sur récents
+// console . log ( chercheDansTitres ( titres , " licorne " ) ) ; // [] : vide , pas une erreur
+// console . log ( titreExiste ( titres , " GIT REFUSE MON PUSH " ) ) ; // true si à toi
+// console . log ( titreExiste ( titres , " Un titre inventé " ) ) ;
+
+
+// fonction validertitres
+
+function validerTitre(titres , saisie){
+
+        const titre = saisie.trim();
+
+        if (titre ==="" /*|| titre.includes(" ")*/){
+                 titres= titres.trim();
+                return("Le titre est obligatoire.")
+        }
+        if (titres.length<=LONGUEUR_MIN){
+                titres= titres.trim();
+              return("Le titre doit faire au moins "+LONGUEUR_MIN+ " caractères.");
+        }  
+        if (titres.length>=LONGUEUR_MAX){
+              return("Le titre ne doit pas dépasser " +LONGUEUR_MAX+ " caractères.");
+        }  
+        if (titreExiste(titres, saisie)){
+               return("Le titre existe déjà.");
+        }
+        return ("");
+}
+
+console.log ( " --- etape 5 ---" ) ;
+console.log ( validerTitre ( titres , " " ) ) ; // ... obligatoire .
+console.log ( validerTitre ( titres , " " ) ) ; // ... obligatoire .
+console.log ( validerTitre ( titres , " abcd " ) ) ; // ... au moins 5 ...
+console.log ( validerTitre ( titres , "a".repeat (81)));  // ... d é passer 80 ...
+console.log (validerTitre (titres ,"Sujet 0"));  // ... existe d é j à .
+console.log (validerTitre (titres ,"Sujet 2"));  // ... existe d é j à .
+console.log(titreExiste(titres, "Sujet 2"))
+const reponse = validerTitre (titres , "Bienvenue sur le MiniForum") ;
+console.log ( " [ " + reponse + " ] " ) ; // [] : cha î ne vide
