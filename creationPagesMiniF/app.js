@@ -68,15 +68,15 @@ function validerTitre(titres , saisie){
         const titre = saisie.trim();
 
         if (titre ==="" /*|| titre.includes(" ")*/){
-                 titres= titres.trim();
+                 titres = titre.trim();
                 return("Le titre est obligatoire.")
         }
-        if (titres.length<=LONGUEUR_MIN){
-                titres= titres.trim();
-              return("Le titre doit faire au moins "+LONGUEUR_MIN+ " caractères.");
+        if (titre.length<LONGUEUR_MIN){
+                //saisie = titre.trim();
+              return("Le titre doit faire au moins " + LONGUEUR_MIN+ " caractères.");
         }  
-        if (titres.length>=LONGUEUR_MAX){
-              return("Le titre ne doit pas dépasser " +LONGUEUR_MAX+ " caractères.");
+        if (titre.length>LONGUEUR_MAX){
+              return("Le titre ne doit pas dépasser " + LONGUEUR_MAX+ " caractères.");
         }  
         if (titreExiste(titres, saisie)){
                return("Le titre existe déjà.");
@@ -87,10 +87,10 @@ function validerTitre(titres , saisie){
 console.log ( " --- etape 5 ---" ) ;
 console.log ( validerTitre ( titres , " " ) ) ; // ... obligatoire .
 console.log ( validerTitre ( titres , " " ) ) ; // ... obligatoire .
-console.log ( validerTitre ( titres , " abcd " ) ) ; // ... au moins 5 ...
+console.log ( validerTitre ( titres , " abcde " ) ) ; // ... au moins 5 ...
 console.log ( validerTitre ( titres , "a".repeat (81)));  // ... d é passer 80 ...
-console.log (validerTitre (titres ,"Sujet 0"));  // ... existe d é j à .
-console.log (validerTitre (titres ,"Sujet 2"));  // ... existe d é j à .
+//console.log (validerTitre (titres ,"Sujet 0"));  // ... existe pas.
+console.log (validerTitre (titres ,"Sujet 2"));  // ... existe déjà.
 console.log(titreExiste(titres, "Sujet 2"))
 const reponse = validerTitre (titres , "Bienvenue sur le MiniForum") ;
 console.log ( " [ " + reponse + " ] " ) ; // [] : cha î ne vide
