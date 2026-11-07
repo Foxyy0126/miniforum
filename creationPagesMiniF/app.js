@@ -7,13 +7,11 @@
 console.log("app.js chargé");
 
 
-
 const LONGUEUR_MAX = 80;
 const LONGUEUR_MIN =5;
 
 
 const  titres = [ 
-
         "Sujet 1",
         "Sujet 2",
         "Sujet 3",
@@ -21,7 +19,6 @@ const  titres = [
         "Sujet 5",
         "Sujet 6",
         "Sujet 7",
-
 ];
 
 
@@ -52,7 +49,7 @@ function validerTitre(titres , saisie){
         
         const titre = saisie.trim();
         
-        if (titre ==="" /*|| titre.includes(" ")*/){
+        if (titre ==="" /*|| titre.includes(" ")?*/ ){
                 titres = titre.trim();
                 return("Le titre est obligatoire.")
         }
@@ -63,8 +60,8 @@ function validerTitre(titres , saisie){
         if (titre.length>LONGUEUR_MAX){
                 return("Le titre ne doit pas dépasser " + LONGUEUR_MAX+ " caractères.");
         }  
-        if (titreExiste(titres, saisie)){
-                return("Le titre existe déjà.");
+        if (titreExiste(titres, titre)===true){
+                return("Ce sujet existe déjà.");
         }
         return ("");
 }
@@ -81,7 +78,6 @@ return carte;
 }
 
 
-
 //suppression de chaque carte de carte-sujet :
 function afficherSujets(titres) {
 const cartes = document.querySelectorAll(".carte-sujets");
@@ -96,17 +92,12 @@ section.append(carteSujet(titre));
 }
 }
 
-// function afficherSujets ( liste ) {
-// const section = document . querySelector ( "#sujets" ) ;
+function afficherErreur(idMessage, texte){
+const zoneMessage=document.querySelector(`#${idMessage}`);
+if (zoneMessage) 
+        zoneMessage.textContent = texte;
+}
 
-// // vider : on retire les CARTES , une par une -- le <h2 > reste
-// document.querySelectorAll(".carte-sujets").forEach((carte) => carte.remove());
-
-// // reconstruire : une carte par titre de la liste re ç ue
-// for ( const titre of titres ) {
-// section.append(carteSujet(titre)) ;
-// }
-// }
 
 
 // --- démarrage : seulement sur la page qui contient la liste ---
@@ -114,8 +105,29 @@ section.append(carteSujet(titre));
 if (document.querySelector("#sujets")!==null){
 afficherSujets (titres) ;
 
- // ... l 'écouteur du formulaire viendra ici (étape 4)
+    const formulaire = document.querySelector ( "#form-nouveau-sujet" ) ;
+
+    formulaire.addEventListener ( "submit" , ( event ) => {event.preventDefault () ; // PREMIÈRE ligne : le navigateur n'enverra rien
+        const pseudo =document.querySelector("#prenomUti");
+        const champTitre = document.querySelector("input[name='titre']");
+        const titreSaisi = champTitre.value.trim(); 
+        const messageErreur = validerTitre(titres, titreSaisi);
+
+                if (messageErreur !== ""){
+                        afficherErreur("erreur-dans-le-titre", messageErreur);
+                        return;
+                }
+                else {
+                        afficherErreur("erreur-dans-le-titre","");
+                        titres.push(titreSaisi);
+                        afficherSujets(titres);
+                        formulaire.reset();
+                        pseudo.focus();
+                }
+    }) ;
+
 }
+
 
 
 
