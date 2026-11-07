@@ -14,14 +14,13 @@ const LONGUEUR_MIN =5;
 
 const  titres = [ 
 
-        "Bienvenue sur le MiniForum",
-        "Sujets récents",
         "Sujet 1",
         "Sujet 2",
         "Sujet 3",
-        "Vos informations, qui êtes-vous ?",
-        "Nouveau sujet",
-        "Option de publication"
+        "Sujet 4",
+        "Sujet 5",
+        "Sujet 6",
+        "Sujet 7",
 
 ];
 
@@ -69,6 +68,63 @@ function validerTitre(titres , saisie){
         }
         return ("");
 }
+
+function carteSujet (titre){
+const carte =document.createElement("article");
+carte.classList.add("carte-sujets");
+
+const h3 = document.createElement("h3");
+h3.textContent=titre
+carte.append(h3);
+return carte;
+
+}
+
+
+
+//suppression de chaque carte de carte-sujet :
+function afficherSujets(titres) {
+const cartes = document.querySelectorAll(".carte-sujets");
+const section=document.querySelector("#sujets");
+
+for (let i = 0; i < cartes.length; i++) {
+  const carte =cartes[i];
+  carte.remove();          
+}
+for (const titre of titres) {
+section.append(carteSujet(titre));
+}
+}
+
+// function afficherSujets ( liste ) {
+// const section = document . querySelector ( "#sujets" ) ;
+
+// // vider : on retire les CARTES , une par une -- le <h2 > reste
+// document.querySelectorAll(".carte-sujets").forEach((carte) => carte.remove());
+
+// // reconstruire : une carte par titre de la liste re ç ue
+// for ( const titre of titres ) {
+// section.append(carteSujet(titre)) ;
+// }
+// }
+
+
+// --- démarrage : seulement sur la page qui contient la liste ---
+
+if (document.querySelector("#sujets")!==null){
+afficherSujets (titres) ;
+
+ // ... l 'écouteur du formulaire viendra ici (étape 4)
+}
+
+
+
+
+
+
+
+
+
 
 
 
