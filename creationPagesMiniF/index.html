@@ -35,39 +35,40 @@
         <section id ="sujets" class="liste-sujets">
             <h2>Sujets récents</h2>
                 <article class="carte-sujets">
-                    <h3>Sujets  1</h3>
-                    <p><strong>Auteurs</strong> Catégorie</p>
+                    <!-- <h3>Sujets  1</h3> -->
+                    <!-- <p><strong>Auteurs</strong> Catégorie</p> -->
                 </article>
                 <article class="carte-sujets">
-                    <h3>Sujets 2</h3>
-                   <p><strong>Auteurs</strong> Catégorie</p>
+                    <!-- <h3>Sujets 2</h3>
+                   <p><strong>Auteurs</strong> Catégorie</p> -->
                 </article>
                 <article class="carte-sujets">
-                    <h3>Sujets 3</h3>
-                    <p><strong>Auteurs</strong> Catégorie</p>
+                    <!-- <h3>Sujets 3</h3>
+                    <p><strong>Auteurs</strong> Catégorie</p> -->
                 </article>
 
 
         </section>
         <section>
             <h2>Vos informations</h2>
-            <form action="/topics" method="post">
+            <form action="/topics" method="post" id="form-nouveau-sujet" novalidate>
                 <fieldset>
                     <legend>Nouveau sujet</legend>
                          <p>
                                <label for="prenomUti">Pseudo :</label>
                                <input type="text" id ="prenomUti" name="pseudo" placeholder="ex : Alice" required>
                          </p>
-
+                         <p class="message-erreur" id = "erreur-pseudo"></p>
                          <p>
                                 <label for="sujet1">Titre du sujet</label>
                                 <input type="text" id="sujet1" name="titre"  maxlength="80" required>
-
                          </p>
+                          <p class="message-erreur" id = "erreur-pseudo"></p>
                          <p>
                                 <label for="message1">Message</label>
                                 <textarea id="message1" name="message"  rows ="6" maxlength="500" required></textarea>      
                          </p>
+                         <p class="message-erreur" id = "erreur-pseudo"></p>
                           
                 </fieldset>
                 <fieldset>

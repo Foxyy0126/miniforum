@@ -12,6 +12,7 @@ flex-basis vait environ 227 px
         --couleur_infos_auteurs_carte_sujets_messages:#2F4300;
         --couleur_hover: #033857;
         --couleur_encadre_selection: pink;
+        --couleur_message_erreur : #F85D2C;
 
        
         --espacement_padding_entete_bornes: 0.8rem 1.5rem;
@@ -24,6 +25,14 @@ flex-basis vait environ 227 px
 
         --rayon:0.6rem;
         
+}
+
+.message-erreur{
+
+        margin : 0.25rem 0 0;
+        min-height: 1.2em;
+        color : var(--couleur_message_erreur);
+        font-size: 0.875rem;
 }
 
 /* === 1. Reglages generaux ====================================*/
