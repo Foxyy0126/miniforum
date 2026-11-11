@@ -178,3 +178,9 @@ const formulaire = document.querySelector ( "#form-nouveau-sujet" ) ;
 // console.log(titreExiste(titres, "Sujet 2"))
 // const reponse = validerTitre (titres , "Bienvenue sur le MiniForum") ;
 // console.log ( " [ " + reponse + " ] " ) ; // [] : cha î ne vide
+
+
+// console.log("[" + validerPseudo(" ") +"]");
+// console.log("[" + validerPseudo("alice") +"]");
+// console.log("[" + validerMessage("a".repeat(500)) +"]");
+// console.log("[" + validerMessage("a".repeat(501)) +"]");
